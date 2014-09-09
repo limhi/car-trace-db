@@ -62,6 +62,8 @@ echo "process xml..."
     #sed -i -f $mypwd/sedFile/setNullFunctionInsert.sed $mypwd/dest/xml/${classList[i]}Mapper.xml
     sed -i -f $mypwd/sedFile/flushCacheFunctionInsert.sed $mypwd/dest/xml/${classList[i]}Mapper.xml
     sed -i -f $mypwd/sedFile/myCacheInsert.sed $mypwd/dest/xml/${packageList[j]}/${classList[i]}Mapper.xml
+    sed -i -f $mypwd/sedFile/removeUnusedFunction.sed $mypwd/dest/xml/${packageList[j]}/${classList[i]}Mapper.xml
+    
     export tempvar=`perl convertBeanNameToTableName.pl ${classList[i]}`   
     sed -i "s/L_AMBRY/${tempvar}/g" $mypwd/dest/xml/${classList[i]}Mapper.xml
     unset tempvar
