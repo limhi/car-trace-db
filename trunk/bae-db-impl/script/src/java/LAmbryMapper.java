@@ -1,6 +1,5 @@
 package org.java.luke.baedb.dao;
 
-import java.util.HashMap;
 import java.util.List;
 
 import org.java.luke.baedb.model.LAmbry;
