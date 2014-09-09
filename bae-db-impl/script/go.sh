@@ -23,6 +23,9 @@ mkdir ${serviceDest} -p
 mkdir ${mapperDest} -p
 mkdir ${beanDest} -p
 
+find ${modelDir} -name "*Mapper.java" |awk -F '/dao/' {'print $2'} > $mypwd/apiList/class.list
+sed -i "s/Mapper.java//g" $mypwd/apiList/class.list
+
 #if [ -z $1 ]
 #then
 #  #echo "-z $1 true";
