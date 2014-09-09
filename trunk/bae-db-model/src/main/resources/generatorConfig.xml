@@ -50,6 +50,9 @@
 		<table tableName="tabletest">
 			<property name="useActualColumnNames" value="true" />
 		</table>
+		<table tableName="tabletest2">
+			<property name="useActualColumnNames" value="true" />
+		</table>
 
 	</context>
 
