@@ -16,5 +16,26 @@
              b begin
         }
     }
-    s/<delete id="deleteByPrimaryKey".*<\/sedeletelect>//;
+    s/<delete id="deleteByPrimaryKey".*<\/delete>//;
 }
+
+/<update id="updateByPrimaryKeySelective"/,/<\/update>/ {
+    /<\/update>/! {
+        $! {
+            N;
+             b begin
+        }
+    }
+    s/<update id="updateByPrimaryKeySelective".*<\/update>//;
+}
+
+/<update id="updateByPrimaryKey"/,/<\/update>/ {
+    /<\/update>/! {
+        $! {
+            N;
+             b begin
+        }
+    }
+    s/<update id="updateByPrimaryKey".*<\/update>//;
+}
+
