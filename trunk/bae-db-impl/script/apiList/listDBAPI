@@ -1,0 +1,1 @@
+grep "" class* |grep -v .svn|awk -F ":" '{print $2}'|sort >temp
