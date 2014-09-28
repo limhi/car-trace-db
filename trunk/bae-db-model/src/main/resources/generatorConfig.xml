@@ -21,7 +21,7 @@
 		</jdbcConnection> 
 		-->
 		<jdbcConnection driverClass="com.mysql.jdbc.Driver"
-			connectionURL="jdbc:mysql://192.168.4.128:3306/test"
+			connectionURL="jdbc:mysql://192.168.4.128:3306/db01"
 			userId="root" password="Alle1234">
 		</jdbcConnection>
 
@@ -47,7 +47,7 @@
 
 		<!-- <table schema="${db.schema}" tableName="tabletest"> <property name="useActualColumnNames" 
 			value="true" /> </table> -->
-		<table tableName="tabletest">
+		<table tableName="MYTEST01">
 			<property name="useActualColumnNames" value="true" />
 		</table>
 
