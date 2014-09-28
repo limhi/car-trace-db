@@ -15,53 +15,16 @@
 			<param name="ConversionPattern" value="LUKE STD %-5p %r %c{2}.%M:%L - %m%n" />
 		</layout>
 	</appender>
-	
-	<appender name="ROLL" class="org.apache.log4j.RollingFileAppender">
-		<!-- 將log儲存在I/O文字檔中 -->
-		<param name="file" value="lukelog.log" />
-		<param name="append" value="true" />
-		<param name="encoding" value="UTF-8" />
 
-		<layout class="org.apache.log4j.PatternLayout">
-			<param name="ConversionPattern" value="LUKE ROLL %-5p %r %c{2}.%M:%L - %m%n" />
-		</layout>
-	</appender>
-	<!--  
-	<appender name="Log4jViewer" class="org.apache.log4j.net.SocketAppender">
-		<param name="remoteHost" value="localhost" />
-		<param name="port" value="4445" />
-		<param name="locationInfo" value="true" />
-	</appender>
-	-->
-	
-<!-- 
-	<logger name="java.sql">
-		<level value="error" />
-	</logger>
 
-	<logger name="org.apache.ibatis.logging">
-		<level value="error" />
-	</logger>	
-	 -->
-	 
-	<logger name="mytest" additivity="false">
+	<logger name="org.java" additivity="false">
 		<level value="DEBUG" />
-		<appender-ref ref="Log4jViewer" />
-		<appender-ref ref="ROLL" />
 		<appender-ref ref="STDOUT" />
 	</logger>
-	
-	<logger name="com.jolbox" additivity="false">
-		<level value="DEBUG" />
-		<appender-ref ref="ROLL" />
-		<appender-ref ref="Log4jViewer" />
-	</logger>
-
 
 	<root>
-		<level value="off" />
+		<level value="warn" />
 		<appender-ref ref="STDOUT" />
-		<appender-ref ref="Log4jViewer" />
 	</root>
 
 </log4j:configuration>
