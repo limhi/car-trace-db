@@ -61,7 +61,7 @@ echo "process xml..."
     #sed -i -f $mypwd/sedFile/customizedFunctionInsert.sed $mypwd/dest/xml/${classList[i]}Mapper.xml
     #sed -i -f $mypwd/sedFile/setNullFunctionInsert.sed $mypwd/dest/xml/${classList[i]}Mapper.xml
     sed -i -f $mypwd/sedFile/flushCacheFunctionInsert.sed $mypwd/dest/xml/${classList[i]}Mapper.xml
-    sed -i -f $mypwd/sedFile/myCacheInsert.sed $mypwd/dest/xml/${packageList[j]}/${classList[i]}Mapper.xml
+    #sed -i -f $mypwd/sedFile/myCacheInsert.sed $mypwd/dest/xml/${packageList[j]}/${classList[i]}Mapper.xml
     sed -i -f $mypwd/sedFile/removeUnusedFunction.sed $mypwd/dest/xml/${packageList[j]}/${classList[i]}Mapper.xml
     
     export tempvar=`perl convertBeanNameToTableName.pl ${classList[i]}`   
@@ -79,7 +79,7 @@ echo "process xml..."
     echo "enable cache XML $i =>  ${classList[i]}"
     #cp -r $mypwd/src/xml/${classList[i]}Mapper.xml $mypwd/dest/xml/${classList[i]}Mapper.xml
     #cd $mypwd/dest/xml
-    sed -i -f $mypwd/sedFile/myCacheInsert.sed $mypwd/dest/xml/${classList[i]}Mapper.xml
+    #sed -i -f $mypwd/sedFile/myCacheInsert.sed $mypwd/dest/xml/${classList[i]}Mapper.xml
     echo "enable cache XML copying... ${classList[i]}Mapper.xml"
     cp $mypwd/dest/xml/${classList[i]}Mapper.xml ${sourceDir}/main/resources/org/java/luke/baedb/dao/${classList[i]}Mapper.xml
 
