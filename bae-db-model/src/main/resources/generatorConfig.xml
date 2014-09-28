@@ -50,6 +50,9 @@
 		<table tableName="MYTEST01">
 			<property name="useActualColumnNames" value="true" />
 		</table>
+		<table tableName="PhoneReg">
+			<property name="useActualColumnNames" value="true" />
+		</table>
 
 	</context>
 
