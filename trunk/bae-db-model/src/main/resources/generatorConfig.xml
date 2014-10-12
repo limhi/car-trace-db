@@ -47,10 +47,25 @@
 
 		<!-- <table schema="${db.schema}" tableName="tabletest"> <property name="useActualColumnNames" 
 			value="true" /> </table> -->
-		<table tableName="MYTEST01">
+		<table tableName="PhoneReg">
 			<property name="useActualColumnNames" value="true" />
 		</table>
-		<table tableName="PhoneReg">
+		<table tableName="CarReg">
+			<property name="useActualColumnNames" value="true" />
+		</table>
+		<table tableName="CPRanNum">
+			<property name="useActualColumnNames" value="true" />
+		</table>
+		<table tableName="CPRelation">
+			<property name="useActualColumnNames" value="true" />
+		</table>
+		<table tableName="PNMessage">
+			<property name="useActualColumnNames" value="true" />
+		</table>
+		<table tableName="PCPN">
+			<property name="useActualColumnNames" value="true" />
+		</table>
+		<table tableName="CPPN">
 			<property name="useActualColumnNames" value="true" />
 		</table>
 
