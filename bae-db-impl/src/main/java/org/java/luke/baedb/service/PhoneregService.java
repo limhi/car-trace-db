@@ -2,6 +2,7 @@ package org.java.luke.baedb.service;
 
 import java.util.LinkedList;
 import java.util.List;
+import java.util.UUID;
 
 import org.java.luke.baedb.dao.PhoneregMapper;
 import org.java.luke.baedb.model.Phonereg;
@@ -23,6 +24,11 @@ public class PhoneregService {
 
 	// @Transactional
 	public int insert(Phonereg record) throws Exception {
+    String encodedKey = record.getEncodedKey();
+    if (null==encodedKey||0==encodedKey.length()) {
+      String uuid = UUID.randomUUID().toString().replaceAll("-", "");
+      record.setEncodedKey(uuid);
+    }
 		return mapper.insertSelective(record);
 	}
 

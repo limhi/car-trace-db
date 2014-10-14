@@ -2,6 +2,7 @@ package org.java.luke.baedb.service;
 
 import java.util.LinkedList;
 import java.util.List;
+import java.util.UUID;
 
 import org.java.luke.baedb.dao.CprelationMapper;
 import org.java.luke.baedb.model.Cprelation;
@@ -23,6 +24,11 @@ public class CprelationService {
 
 	// @Transactional
 	public int insert(Cprelation record) throws Exception {
+    String encodedKey = record.getEncodedKey();
+    if (null==encodedKey||0==encodedKey.length()) {
+      String uuid = UUID.randomUUID().toString().replaceAll("-", "");
+      record.setEncodedKey(uuid);
+    }
 		return mapper.insertSelective(record);
 	}
 

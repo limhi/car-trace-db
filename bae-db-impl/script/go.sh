@@ -127,8 +127,8 @@ echo "process java..."
     mkdir ${sourceDir}/main/java/org/java/luke/baedb/dao -p
 
     cp $mapperSrc $mapperDest/${classList[i]}Mapper.java
-    sed -i "s/dao.library/dao.${packageList[j]}/g" $mapperDest/${classList[i]}Mapper.java
-    sed -i "s/model.library/model.${packageList[j]}/g" $mapperDest/${classList[i]}Mapper.java
+    #sed -i "s/dao.library/dao.${classList[i]}/g" $mapperDest/${classList[i]}Mapper.java
+    #sed -i "s/model.library/model.${classList[i]}/g" $mapperDest/${classList[i]}Mapper.java
     sed -i "s/LAmbry/${classList[i]}/g" $mapperDest/${classList[i]}Mapper.java
     
     echo "copying... ${classList[i]}Mapper.java"
